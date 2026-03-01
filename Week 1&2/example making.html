@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Registration Form</title>
+</head>
+<body>
+    <h1>University Registration Form</h1>
+    Please fill out the form below to register:<br>
+    <hr>
+    <h3>Personal Details</h3>
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" placeholder="eg.Aaditya" name="fname">
+        <br><br>
+        <label for="sname">First Name:</label>
+        <input type="text" id="sname" placeholder="eg.Prakash" name="sname">
+        <br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" placeholder="dd/mm/yyyy" name="dob">
+        <br><br>
+        <label for="gender">Gender:</label><br>
+        <input type='radio' id="male" name="gender" value="male">Male</input><br>
+        <input type='radio' id="female" name="gender" value="female">Female</input><br>
+        <input type='radio' id="other" name="gender" value="other">Other</input><br><br>
+        Upload your file:<br>
+        <input type="file"><br><br>
+        <hr>
+        <h3>Contact Information</h3>
+        <label for="email">Email Address</label>
+        <input type='email' id="email" name="email" placeholder="aaditya@gmail.com"><br><br>
+        <label for="phno">Phone Number</label>
+        <input type='tel' id="phno" name="phno" placeholder="9368641200"><br><br>
+        <label for="add">Mailing Address</label><br>
+        <textarea name="add" id="add" placeholder="T-1,901/903,Madhuban Greens ,Moradabad" rows="6" cols="30"></textarea>
+        <br><br>
+        <hr>
+        <h3>Academic Information</h3><br>
+        <label for="course">Select your Course:</label><br>
+        <select id="course" name="course">
+            <option value="">No course selected</option>
+            <option value="CSE">CSE</option>
+            <option value="Mechnanical Engineering">Mechanical Engineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+        </select>
+        <br><br>
+        <label for="interests">Extracurricular Interests</label><br>
+        <input name="interests" id="interests" type="checkbox" value="Sports">
+        <label for="phno">Sports</label><br>
+        <input name="interests" id="interests" type="checkbox" value="Music&Arts">
+        <label for="phno">Music & Arts</label><br>
+        <input name="interests" id="interests" type="checkbox" value="Techclub">
+        <label for="phno">Technology Club</label><br>
+        <input name="interests" id="interests" type="checkbox" value="volunteering">
+        <label for="interests">Volunteering</label><br>
+        <br><br>
+        <hr>
+        <h3>Create your Account</h3>
+        <br>
+        <label for="pass">Create a Password:</label>
+        <input type="password" id="pass" name="pass">
+        <br><br>
+        <label for="secq">Security Question:</label>
+        <select id="secq" name="secq">
+            <option value="">Choose a security question</option>
+            <option value="petname">What is the name of your pet?</option>
+            <option value="home">Where do you live?</option>
+            <option value="schoolname">What is the name of your school?</option>
+        </select><br><br>
+        <label for="sec ans">Security Answer:</label>
+        <input type="text" name="sec ans" id="sec ans">
+        <br><br>
+        <input type="checkbox" id="agree" name="agree" value="agree">I agree to the terms and conditions.
+        <br><br>
+        <hr>
+        <input type="submit" name="submit" value="Register">
+        <input type="reset" name="clear" value="Clear form">
+    </form>
+</body>
+</html>

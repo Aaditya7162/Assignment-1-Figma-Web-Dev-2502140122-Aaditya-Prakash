@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box
+}
+nav{
+    display:flex;
+    padding:0 px;
+    background-color:rgb(43, 43, 43);
+    gap:0px; /* row gap & column gap both*/
+    overflow:scroll;
+}
+p{
+    padding:8px 16px;
+    background-color: inherit;
+    color:white;
+    font-family:sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
