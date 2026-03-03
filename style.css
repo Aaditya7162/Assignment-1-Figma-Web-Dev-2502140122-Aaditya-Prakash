@@ -506,6 +506,9 @@
     .loginarea{
         display:none;
     }
+    #mainline1{
+        display:none;
+    }
     .Head{
         margin-left:64px;
     }
