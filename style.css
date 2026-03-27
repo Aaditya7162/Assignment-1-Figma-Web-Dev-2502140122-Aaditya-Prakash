@@ -87,7 +87,7 @@
     font-family: Montserrat, sans-serif;
     letter-spacing: 0.5px;
     font-size:13px;
-    width:335px;
+    width:auto;
 }
 
 
@@ -98,7 +98,6 @@
 }
 
 #heading{
-    max-width:335px;
     width:100%;
     color:#3a41a1;
     font-size:24px;
@@ -107,7 +106,6 @@
 }
 
 #mainline{
-    max-width:335px;
     width:100%;
     font-family: Montserrat, sans-serif;
     font-weight:300;
@@ -116,9 +114,10 @@
     font-size:14px;
     line-height:22px;
 }
-
+#desc2{
+    display:flex;
+}
 .overview{
-    max-width:335px;
     width:100%;
     height:300px;
     background-color:#f4f4f4;
@@ -130,11 +129,10 @@
     display:flex;
     align-items:center;
     gap:10px;
-    width:335px;
+    width:100%;
 }
 
 #start{
-    max-width:335px;
     width:100%;
     height:56px;
     border-radius:10px;
@@ -173,7 +171,7 @@
 .whychoosecourse,
 .outcome{
     margin: 40px 20px;
-    width:335px;
+    width:auto;
 }
 
 .outcomes{
@@ -183,7 +181,7 @@
     border-radius:20px;
     background-color:#f7fafc;
     font-family:Montserrat, sans-serif;
-    width:335px;
+    width:100%;
 }
 
 .outhead{
@@ -191,7 +189,7 @@
     font-size:20px;
     font-weight:500;
     margin-bottom:10px;
-    width:335px;
+    width:100%;
 }
 
 .outdes{
@@ -246,7 +244,7 @@
     background-color: #3f45a6;
     color: white;
     padding: 40px 20px;
-    width:380px;
+    width:100%;
 }
 
 .mobile h2 {
@@ -371,7 +369,7 @@
     align-items:center;
     gap:20px;
     font-weight:800;
-    width:1712px;
+    width:100%;
 }
 #impact{
     font-size:15px;
@@ -419,13 +417,27 @@
     background-color:#f0f0f0;
     border-radius:10px;
     margin-top:20px;
-    margin-left:100px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.arrow-img {
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    cursor: pointer;
+    margin: 0 15px;
+    opacity: 0.6;
+}
+.arrow-img:hover {
+    opacity: 1;
 }
 #youtube{
     border-radius:100%;
 }
 #swiggy{
     margin:45px;
+    margin-top:10px;
     border:10px solid white;
     border-radius:10px;
 }
@@ -512,22 +524,94 @@
     .Head{
         margin-left:64px;
     }
-    #ad7{display:none;}
-    #ad8{display:none;}
-    #ad1{display:none;}
-    #ad2{display:none;}
-    #ad3{display:none;}
+    .ads {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 10px;
+    }
+    #ad1, #ad2, #ad3, #ad7, #ad8 {
+        display: none;
+    }
+    #impact1, #impact2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+    #impact2 {
+        align-items: center;
+    }
+    #impact2 div {
+        width: auto;
+    }
+    .impact {
+        padding: 40px 10px;
+    }
     #line{
     display:none;
     }
-    .overview1{
-        display:none;
+    .desc {
+        display: flex;
+        flex-direction: column;
+    }
+    #desc1 {
+        display: contents;
+    }
+    .overview {
+        display: none !important;
+    }
+    #rec { order: 1; }
+    #upper { order: 2; margin-bottom: 20px; }
+    #overviewcourse { order: 4; }
+    #desc1 > div:last-child { order: 5; margin-top: 10px; }
+    #desc1 > br { display: none; }
+    #desc2 {
+        order: 3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .overview1 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #swiggy {
+        width: 100%;
+        height: auto;
+        margin: 0 0 15px 0;
+        border: none;
+    }
+    .swiggyover {
+        margin-left: 0;
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+    #mainswiggy {
+        font-size: 22px;
+    }
+    .swiggydata {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .swiggydata div, .swiggydata1 {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .arrow-img {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
     }
     .desktop{
         display:none;
-    }
-    .impact{
-        max-width:380px;
     }
 }
 
@@ -536,11 +620,18 @@
         display:none;
     }
     .description{
-    width:712px;
-    height:668px;
+    width:100%;
+    margin:0;
     margin-top:64px;
-    margin-left:64px;
+    padding-left:64px;
+    padding-right:64px;
+    height:auto;
 }
+    .desc{
+        display:flex;
+        justify-content:space-between;
+        gap:2vw;
+    }
 #mobile{
     display:none;
 }
@@ -580,7 +671,8 @@
 }
 @media (min-width: 768px){
     .whychoosecourse{
-        width:1472px;
+        width:100%;
+        padding-right:4%;
     }
     #whychoose1{
         display:flex;
@@ -611,7 +703,7 @@
         display:flex;
         flex-direction:column;
         align-items:center;
-        width:1472px;
+        width:100%;
         background-color:#f7f9fa;
         margin:0;
     }
